@@ -55,8 +55,8 @@ struct ComicView_Previews: PreviewProvider {
     }
     
     struct MockService: ComicServiceProtocol {
-        func fetchComic(withId comicId: Int) async throws -> Comic {
-            return .init(id: 123, title: "Comic title", description: "Comic description", images: [])
+        func fetchComic(withId comicId: Int) async throws -> ComicProtocol {
+            return Comic(id: 123, title: "Comic title", description: "Comic description", images: [])
         }
     }
 }

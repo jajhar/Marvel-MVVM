@@ -22,7 +22,7 @@ enum ComicViewModelError: Error {
 class ComicViewModel: ObservableObject, ComicViewModelProtocol {
     private let service: ComicServiceProtocol
         
-    @Published var comic: Comic?
+    @Published var comic: ComicProtocol?
     @Published var error: ComicViewModelError?
     
     var title: String? {

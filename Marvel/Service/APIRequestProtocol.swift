@@ -47,7 +47,6 @@ extension APIRequestProtocol {
     
     func generateHash(timestamp: String) -> String {
         return (timestamp + Self.privateApiKey + Self.publicApiKey).md5
-
     }
 }
 

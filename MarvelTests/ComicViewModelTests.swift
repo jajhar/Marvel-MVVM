@@ -14,7 +14,7 @@ final class ComicViewModelTests: XCTestCase {
     }
     
     func test_fetchComic_success_modelUpdates() async throws {
-        let service = MockComicService(comicResponse: .init(
+        let service = MockComicService(comicResponse: Comic(
             id: 123,
             title: "title",
             description: "description",
@@ -41,10 +41,10 @@ final class ComicViewModelTests: XCTestCase {
 }
 
 private struct MockComicService: ComicServiceProtocol {
-    var comicResponse: Comic?
+    var comicResponse: ComicProtocol?
     var errorResponse: ComicServiceError?
     
-    func fetchComic(withId comicId: Int) async throws -> Comic {
+    func fetchComic(withId comicId: Int) async throws -> ComicProtocol {
         if let comic = comicResponse {
             return comic
         }

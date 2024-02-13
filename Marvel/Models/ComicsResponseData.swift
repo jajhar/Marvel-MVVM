@@ -7,11 +7,7 @@
 
 import Foundation
 
-protocol ComicsResponseDataProtocol {
-    
-}
-
-struct ComicsResponseData: ComicsResponseDataProtocol, Codable {
+struct ComicsResponseData: Codable {
     
     struct ComicsResultData: Codable {
         let results: [Comic]

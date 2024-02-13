@@ -99,8 +99,8 @@
 		8C48C51B2B7AE3EC00F4A59F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8C48C51C2B7AE43D00F4A59F /* Comic.swift */,
 				8C48C51E2B7AE8EC00F4A59F /* ComicsResponseData.swift */,
+				8C48C51C2B7AE43D00F4A59F /* Comic.swift */,
 				8C48C5202B7AF12D00F4A59F /* Image.swift */,
 			);
 			path = Models;

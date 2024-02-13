@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ComicServiceProtocol {
-    func fetchComic(withId comicId: Int) async throws -> Comic
+    func fetchComic(withId comicId: Int) async throws -> ComicProtocol
 }
 
 enum ComicServiceError: Error {
@@ -24,7 +24,7 @@ struct ComicService: ComicServiceProtocol {
         self.session = session
     }
     
-    func fetchComic(withId comicId: Int) async throws -> Comic {
+    func fetchComic(withId comicId: Int) async throws -> ComicProtocol {
         guard let request = APIRequest.fetchComic(comicId: comicId).request() else {
             throw ComicServiceError.invalidURL
         }
